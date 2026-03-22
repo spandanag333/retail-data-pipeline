@@ -6,7 +6,7 @@ Built an end-to-end data pipeline to ingest, transform, and store product data f
 
 ## 🎯 Objective
 
-To simulate a real-world data engineering pipeline including ingestion, transformation, and storage for downstream analytics.
+To build a scalable end-to-end data pipeline that ingests data from an external API, transforms it into a structured format, and loads it into a database for analytical querying.
 
 ## 🏗️ Architecture
 
@@ -32,11 +32,22 @@ API → Raw JSON → Pandas → CSV → SQLite → SQL Queries
 2. Run pipeline:
    python scripts/run_pipeline.py
 
-## 📊 Sample Query Output
+## 📊 Sample Output
+
+Example SQL Query:
+SELECT category, AVG(price) as avg_price FROM products GROUP BY category;
+
+Output:
 
 | category | avg_price |
 |----------|----------|
 | beauty   | 45.2     |
+| groceries| 23.1     |
 
 
+## 🔄 Future Improvements
 
+- Integrate with Azure Data Lake for cloud storage
+- Replace SQLite with MySQL or Snowflake
+- Implement scheduling using Airflow or Cron
+- Add data validation and monitoring
