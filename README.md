@@ -1,4 +1,4 @@
-# Retail Data Pipeline Project
+# api-to-database-data-pipeline
 
 ## Overview
 Built an end-to-end data pipeline to ingest, transform, and store product data from an external API.
