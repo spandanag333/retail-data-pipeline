@@ -1,4 +1,4 @@
-# api-to-database-data-pipeline
+# # End-to-End Data Engineering Pipeline (API to SQLite)
 
 ## Overview
 Built an end-to-end data pipeline to ingest, transform, and store product data from an external API.
