@@ -37,6 +37,9 @@ def main():
     print("Starting data load process...")
 
     df = load_data()
+
+    print(f"Rows loaded to DB: {len(df)}")
+    
     conn = create_connection()
 
     load_to_db(df, conn)

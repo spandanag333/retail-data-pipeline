@@ -60,6 +60,8 @@ def main():
     
     df_clean = clean_data(df)
     print("Cleaned Data Sample:\n", df_clean.head())
+
+    print(f"Rows processed: {len(df_clean)}")
     
     save_data(df_clean)
     
