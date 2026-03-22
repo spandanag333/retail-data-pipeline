@@ -1,4 +1,5 @@
 # # End-to-End Data Engineering Pipeline (API to SQLite)
+🚀 Project Level: Level 1 (Foundational Data Engineering Pipeline)
 
 ## Overview
 Built an end-to-end data pipeline to ingest, transform, and store product data from an external API.
