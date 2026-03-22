@@ -3,8 +3,13 @@
 ## Overview
 Built an end-to-end data pipeline to ingest, transform, and store product data from an external API.
 
-## Architecture
-API → JSON → Pandas → CSV → SQLite → SQL Queries
+## 🎯 Objective
+
+To simulate a real-world data engineering pipeline including ingestion, transformation, and storage for downstream analytics.
+
+## 🏗️ Architecture
+
+API → Raw JSON → Pandas → CSV → SQLite → SQL Queries
 
 ## Features
 - API-based data ingestion using Python
@@ -25,3 +30,12 @@ API → JSON → Pandas → CSV → SQLite → SQL Queries
 
 2. Run pipeline:
    python scripts/run_pipeline.py
+
+## 📊 Sample Query Output
+
+| category | avg_price |
+|----------|----------|
+| beauty   | 45.2     |
+
+
+
