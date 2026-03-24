@@ -1,23 +1,30 @@
-import subprocess
+from scripts.fetch_data import main as fetch_main
+from scripts.transform_data import main as transform_main
+from scripts.load_to_db import main as load_main
+from scripts.logger import setup_logger
 
-def run_script(script_name):
-    print(f"\nRunning {script_name}...")
-    result = subprocess.run(["python", script_name])
-    
-    if result.returncode != 0:
-        print(f"{script_name} failed ❌")
-        exit()
-    else:
-        print(f"{script_name} completed ✅")
+# Initialize logger
+logger = setup_logger()
 
 
-def main():
-    run_script("C:/Users/spand/Desktop/Data Engineer/retail-data-pipeline/scripts/fetch_data.py")
-    run_script("C:/Users/spand/Desktop/Data Engineer/retail-data-pipeline/scripts/transform_data.py")
-    run_script("C:/Users/spand/Desktop/Data Engineer/retail-data-pipeline/scripts/load_to_db.py")
-    
-    print("\nFull pipeline executed successfully 🚀")
+def run_pipeline():
+    logger.info("Starting full data pipeline...")
+
+    try:
+        logger.info("Step 1: Fetching data...")
+        fetch_main()
+
+        logger.info("Step 2: Transforming data...")
+        transform_main()
+
+        logger.info("Step 3: Loading data to database...")
+        load_main()
+
+        logger.info("Full pipeline executed successfully")
+
+    except Exception as e:
+        logger.error(f"Pipeline failed: {e}")
 
 
 if __name__ == "__main__":
-    main()
+    run_pipeline()

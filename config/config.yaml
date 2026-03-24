@@ -1,0 +1,13 @@
+api:
+  url: https://dummyjson.com/products
+
+paths:
+  raw_data: data/raw/
+  processed_data: data/processed/products_cleaned.csv
+
+logs:
+  log_dir: logs/
+  error_file: logs/error.log
+
+database:
+  name: data/products.db
