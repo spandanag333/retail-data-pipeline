@@ -10,7 +10,7 @@ from scripts.logger import setup_logger
 config = load_config()
 logger = setup_logger()
 
-API_URL = config["api"]["url"]
+API_URL = config["api"]["products_url"]
 RAW_DATA_PATH = config["paths"]["raw_data"]
 
 
@@ -54,14 +54,14 @@ def main():
 
     if data:
         logger.info(f"Number of records fetched: {len(data)}")
-        logger.info(f"Sample record: {data[0]}")
+        logger.info(f"Sample record ID: {data[0]['id']}, Title: {data[0]['title']}")
 
         save_data(data)
 
         logger.info("Pipeline completed successfully")
 
     else:
-        logger.error("Pipeline failed ❌ Check logs")
+        logger.error("Pipeline failed. Check logs")
 
 
 if __name__ == "__main__":

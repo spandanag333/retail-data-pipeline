@@ -66,7 +66,7 @@ def main():
     df = load_data()
 
     if df is None:
-        print("Data load failed ❌")
+        print("Data load failed")
         return
 
     print(f"Rows loaded to DB: {len(df)}")
@@ -74,7 +74,7 @@ def main():
     conn = create_connection()
 
     if conn is None:
-        print("DB connection failed ❌")
+        print("DB connection failed")
         return
 
     load_to_db(df, conn)
@@ -82,7 +82,7 @@ def main():
 
     conn.close()
 
-    print("Data load completed successfully ✅")
+    print("Data load completed successfully")
 
 
 if __name__ == "__main__":

@@ -1,5 +1,6 @@
 api:
-  url: https://dummyjson.com/products
+  products_url: https://dummyjson.com/products
+  users_url: https://dummyjson.com/users
 
 paths:
   raw_data: data/raw/
